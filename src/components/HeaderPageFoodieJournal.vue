@@ -51,6 +51,7 @@
           :img="item.img"
           :title="item.title"
           :date="item.date"
+          if-not-title="false"
         />
       </div>
     </section>
@@ -78,6 +79,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/config';
+
 .foodie-journal {
   background-color: #f6f7f1;
 }

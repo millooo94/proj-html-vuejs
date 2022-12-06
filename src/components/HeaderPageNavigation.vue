@@ -8,11 +8,18 @@
             <span>Advertise with us</span>
           </div>
           <div class="col-auto left-block d-flex align-items-center">
-            <font-awesome-icon
-              v-for="(item) in navigationData.social"
-              :key="item"
-              :icon="`fa-brands fa-${item}`"
-            />
+            <a
+              href=""
+              title="icone"
+              aria-label="icona"
+            >
+              <span class="no-visible">icona navigazione</span>
+              <font-awesome-icon
+                v-for="(item) in navigationData.social"
+                :key="item"
+                :icon="`fa-brands fa-${item}`"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -90,6 +97,9 @@ export default {
         color: inherit;
       }
   }
+}
+.no-visible {
+  display: none;
 }
 
 </style>

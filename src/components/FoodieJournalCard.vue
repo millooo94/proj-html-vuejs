@@ -5,7 +5,10 @@
       :src="img"
       :alt="title"
     >
-    <h3 class="text-center">
+    <h3
+      v-if="(ifNotTitle == 'true')"
+      class="text-center"
+    >
       {{ title }}
     </h3>
     <span class="text-center m-auto">{{ date }}</span>
@@ -19,6 +22,7 @@ export default {
     img: String,
     title: String,
     date: String,
+    ifNotTitle: String,
   },
 
 };
