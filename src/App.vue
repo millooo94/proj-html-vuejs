@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderPage />
+    <HeaderPage :navigation-data="navigationData" />
     <MainPage />
     <FooterPage />
   </div>
@@ -18,11 +18,31 @@ export default {
     MainPage,
     FooterPage,
   },
+  data() {
+    return {
+      navigationData: {
+        social: [
+          'facebook-f',
+          'instagram',
+          'twitter',
+          'youtube',
+        ],
+        menu: [
+          'Home',
+          'Recipes',
+          'Places',
+          'Blog',
+          'About',
+          'Contact',
+        ],
+      },
+    };
+  },
 
 };
 </script>
 
-<style>
+<style lang="scss">
 @import "~bootstrap/scss/bootstrap";
 
 </style>
