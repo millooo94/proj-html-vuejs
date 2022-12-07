@@ -8,18 +8,11 @@
             <span>Advertise with us</span>
           </div>
           <div class="col-auto left-block d-flex align-items-center">
-            <a
-              href=""
-              title="icone"
-              aria-label="icona"
-            >
-              <span class="no-visible">icona navigazione</span>
-              <font-awesome-icon
-                v-for="(item) in navigationData.social"
-                :key="item"
-                :icon="`fa-brands fa-${item}`"
-              />
-            </a>
+            <font-awesome-icon
+              v-for="(item) in navigationData.social"
+              :key="item"
+              :icon="`fa-brands fa-${item}`"
+            />
           </div>
         </div>
       </div>

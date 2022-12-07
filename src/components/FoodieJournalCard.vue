@@ -1,5 +1,5 @@
 <template>
-  <div class="col-4 d-flex flex-column">
+  <div class="d-flex flex-column">
     <img
       class="img-fluid"
       :src="img"
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'LowerHeaderPageCard',
+  name: 'FoodieJournalCard',
   props: {
     img: String,
     title: String,

@@ -9,7 +9,7 @@
         </p>
       </div>
       <div class="col-auto">
-        <button>
+        <button class="read-our-blog">
           <span>READ OUR BLOG</span>
           <font-awesome-icon icon="fa-solid fa-book-open-reader" />
         </button>
@@ -17,24 +17,51 @@
     </div>
     <div class="row">
       <div class="col-8">
-        <FarmToTableContent />
+        <RecipesCard
+          :popular-recipes-data="popularRecipesData"
+        />
+        <div class="row row-cols-2">
+          <FoodieJournalCard
+            v-for="item in foodieJournalData.slice(1)"
+            :key="item.img"
+            :img="item.img"
+            :title="item.title"
+            :date="item.date"
+            if-not-title="false"
+          />
+        </div>
+        <button class="load-more-posts w-100">
+          LOAD MORE POSTS
+        </button>
       </div>
       <div class="col-4">
-        <FarmToTableAside />
+        <FarmToTableAside
+          :farm-to-table-data="farmToTableData"
+          :navigation-data="navigationData"
+          :foodie-journal-data="foodieJournalData"
+        />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import FarmToTableContent from '@/components/FarmToTableContent.vue';
+import RecipesCard from '@/components/RecipesCard.vue';
+import FoodieJournalCard from '@/components/FoodieJournalCard.vue';
 import FarmToTableAside from '@/components/FarmToTableAside.vue';
 
 export default {
   name: 'MainPageFarmToTable',
   components: {
-    FarmToTableContent,
+    RecipesCard,
+    FoodieJournalCard,
     FarmToTableAside,
+  },
+  props: {
+    popularRecipesData: Array,
+    foodieJournalData: Array,
+    farmToTableData: Array,
+    navigationData: Object,
   },
 
 };
@@ -53,7 +80,7 @@ export default {
     font-size: .8rem;
   }
 }
-button {
+.read-our-blog {
   display: flex;
   justify-content: space-between;
   align-items: center;

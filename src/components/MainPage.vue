@@ -7,7 +7,12 @@
       <MainPageCulinaryCollection
         :culinary-collection-data="culinaryCollectionData"
       />
-      <MainPageFarmToTable />
+      <MainPageFarmToTable
+        :popular-recipes-data="popularRecipesData"
+        :foodie-journal-data="foodieJournalData"
+        :farm-to-table-data="farmToTableData"
+        :navigation-data="navigationData"
+      />
     </div>
   </main>
 </template>
@@ -23,6 +28,10 @@ export default {
     MainPagePopularRecipes,
     MainPageCulinaryCollection,
     MainPageFarmToTable,
+  },
+  props: {
+    foodieJournalData: Array,
+    navigationData: Object,
   },
   data() {
     return {
@@ -76,6 +85,31 @@ export default {
         {
           img: '/img/quick-easy-recipes.png',
           name: 'quick & easy',
+        },
+      ],
+      farmToTableData: [
+        {
+          img: '/img/ad-bg.jpg',
+          title: 'view our latest recipes',
+        },
+        {
+          img: '/img/singapore-featured-image.jpg',
+          title: 'City Guide: Singapore',
+          date: 'February 27th, 2019',
+        },
+        {
+          img: '/img/slide1-bg-66x66.jpg',
+          title: '6 Nutritional Tips to Help Burn Body Fat',
+          date: 'February 28th, 2019',
+        },
+        {
+          userImg: '/img/3a74ce3d0532b7773b174c45ca3bd05a_normal.png',
+          name: 'ThemeFusion',
+          username: '@Theme_Fusion',
+          tweetFirstPart: 'Do you need sublime WordPress hosting for your nex website? Take advantage of exclusive partner offers that we have secured just for you, & launch your site in seconds with',
+          tweetSecondPart: 'on WP Engine hosting & get 30% Off this Black Friday',
+          link: 'bit.ly/3kjLLE2',
+          postImg: '/img/En2TRxLW4AEiWUN.jpeg',
         },
       ],
     };

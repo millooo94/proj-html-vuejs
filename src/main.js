@@ -3,7 +3,10 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faTwitter, faInstagram, faFacebookF, faYoutube, faGoogleDrive,
 } from '@fortawesome/free-brands-svg-icons';
-import { faMagnifyingGlass, faBookOpenReader } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMagnifyingGlass, faBookOpenReader, faEarthAmericas,
+} from '@fortawesome/free-solid-svg-icons';
+
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import App from './App.vue';
@@ -16,6 +19,7 @@ library.add(
   faMagnifyingGlass,
   faGoogleDrive,
   faBookOpenReader,
+  faEarthAmericas,
 );
 Vue.component('FontAwesomeIcon', FontAwesomeIcon);
 

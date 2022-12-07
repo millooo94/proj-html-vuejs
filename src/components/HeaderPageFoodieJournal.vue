@@ -32,7 +32,7 @@
        justify-content-center align-items-center position-relative"
       >
         <h1 class="text-center">
-          {{ lowerHeaderData[0].title }}
+          {{ foodieJournalData[0].title }}
         </h1>
         <span class="mt-2">{{ replaceDate() }}</span>
         <div class="tag">
@@ -46,8 +46,9 @@
       </h2>
       <div class="row justify-content-between align-items-center">
         <FoodieJournalCard
-          v-for="item in lowerHeaderData"
+          v-for="item in foodieJournalData.slice(0,3)"
           :key="item.img"
+          class="col-4"
           :img="item.img"
           :title="item.title"
           :date="item.date"
@@ -67,11 +68,11 @@ export default {
     FoodieJournalCard,
   },
   props: {
-    lowerHeaderData: Array,
+    foodieJournalData: Array,
   },
   methods: {
     replaceDate() {
-      return this.lowerHeaderData[1].date.replace('By admin | ', '').replace('th', '');
+      return this.foodieJournalData[1].date.replace('By admin | ', '').replace('th', '');
     },
   },
 
