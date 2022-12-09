@@ -2,7 +2,9 @@
   <section class="farm-to-table">
     <div class="row justify-content-between">
       <div class="text-block col-auto">
-        <h2>FARM TO TABLE</h2>
+        <h2 class="fs-6">
+          FARM TO TABLE
+        </h2>
         <p class="section-paragraph mt-4 mb-5">
           Aliquam erat voluptat. Ut quis ligula a magna blandit finibus.
           Suspendisse maximum lacus non nunc lacinia lobortis
@@ -15,12 +17,15 @@
         </button>
       </div>
     </div>
-    <div class="row">
+    <div class="row main-content row-cols-2 g-5">
       <div class="col-8">
         <RecipesCard
           :popular-recipes-data="popularRecipesData"
+          :foodie-journal-data="foodieJournalData"
+          if-not-button="true"
+          if-not-read-more="false"
         />
-        <div class="row row-cols-2">
+        <div class="foodie.journal-card-container row row-cols-2 g-4">
           <FoodieJournalCard
             v-for="item in foodieJournalData.slice(1)"
             :key="item.img"
@@ -58,7 +63,7 @@ export default {
     FarmToTableAside,
   },
   props: {
-    popularRecipesData: Array,
+    popularRecipesData: Object,
     foodieJournalData: Array,
     farmToTableData: Array,
     navigationData: Object,
@@ -68,27 +73,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/config';
 .farm-to-table {
   padding-top: 10rem;
+  padding-bottom: 5rem;
 }
 .text-block {
   max-width: 500px;
   h2 {
-    font-size: 1.2rem;
+    font-size: $text_2;
   }
-  p {
-    font-size: .8rem;
+  .section-paragraph {
+    font-size: $text_1;
   }
 }
 .read-our-blog {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fc7525;
+  background-color: $primary-color;
   color: white;
-  font-size: .8rem;
+  font-size: $text_1;
   border: none;
   padding: .4em 1.5em;
   gap: .5rem;
+}
+button {
+  background-color: $secondary-color_1;
+  border: none;
+  color: $black;
+  font-weight: 600;
+  padding: .5rem;
+  margin-top: 2rem;
 }
 </style>

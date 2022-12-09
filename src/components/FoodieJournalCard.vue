@@ -1,17 +1,41 @@
 <template>
-  <div class="d-flex flex-column">
-    <img
-      class="img-fluid"
-      :src="img"
-      :alt="title"
+  <div class="overflow-hidden">
+    <div
+      class="card p-0"
     >
-    <h3
-      v-if="(ifNotTitle == 'true')"
-      class="text-center"
-    >
-      {{ title }}
-    </h3>
-    <span class="text-center m-auto">{{ date }}</span>
+      <div class="img-container">
+        <img
+          class="img-fluid"
+          :src="img"
+          :alt="title"
+          style="width: 100%"
+        >
+        <div class="overlay d-flex flex-column justify-content-center align-items-center">
+          <a
+            href="#"
+            title="social-icon"
+            aria-label="social-icon"
+          >
+            <div class="icon">
+              <font-awesome-icon icon="fa-solid fa-link" />
+            </div>
+          </a>
+
+          <div class="text-center">
+            {{ title }}
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3
+          v-if="(ifNotTitle == 'false')"
+          class="text-center"
+        >
+          {{ title }}
+        </h3>
+        <span class="date d-flex justify-content-center m-auto">{{ date }}</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -29,11 +53,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h3 {
-  font-size: 1.2rem;
+@import '@/assets/scss/config';
+.card {
+  border: none;
+  h3 {
+  font-size: $text_2;
 }
-span {
-  font-size: .8rem;
+  .date {
+  font-size: $text_1;
+  color: $gray;
 }
-
+}
+.img-container {
+  position: relative;
+}
 </style>

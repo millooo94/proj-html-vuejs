@@ -1,9 +1,38 @@
 $primary-color: #fc7525;
 $secondary-color: #f6f7f1;
+$secondary-color_1: #f0eeeb;
 $black: #262628;
 $gray: #6a6b6c;
 $light-gray: #afafaf;
+$green: #1ca142;
+$text_0: .7rem;
 $text_1: .8rem;
 $text_2: 1rem;
 $text_3: 1.5rem;
-$text_4: 2.5rem;
+$text_4: 2rem;
+a {
+    color: $black;
+    text-decoration: none;
+    &:visited, &:hover, &:active {
+        color: inherit;
+      }
+  }
+  .overlay {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(252, 117, 37, 0.5) 0%,rgba(252, 117, 37, 1) 100%);
+    color: white;
+    .icon {
+      clip-path: circle();
+      padding: .8em;
+      color: rgba(252, 117, 37, 0.5);
+      background-color: white;
+    }
+  }
+  .img-container:hover .overlay {
+    visibility: visible;
+  }

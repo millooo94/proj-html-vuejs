@@ -1,5 +1,5 @@
 <template>
-  <section class="popular-recipes">
+  <section class="popular-recipes fs-6">
     <h2 class="text-center">
       POPULAR RECIPES
     </h2>
@@ -9,20 +9,40 @@
       <div class="col-6">
         <RecipesCard
           :popular-recipes-data="popularRecipesData"
+          if-not-button="false"
+          if-not-read-more="true"
         />
       </div>
       <div class="col-6">
         <div class="row row-cols-2 g-3">
           <div
-            v-for="item in popularRecipesData[1]"
-            :key="item"
+            v-for="(item, index) in popularRecipesData.recipeImages"
+            :key="index"
             class="col"
           >
-            <img
-              class="img-fluid h-100"
-              :src="item"
-              :alt="item"
-            >
+            <div class="img-container">
+              <img
+                class="img-fluid h-100"
+                :src="item.img"
+                :alt="item.title"
+              >
+              <div class="overlay d-flex flex-column justify-content-center align-items-center">
+                <a
+                  href="#"
+                  title="social-icon"
+                  aria-label="social-icon"
+                >
+                  <div class="icon">
+                    <font-awesome-icon icon="fa-solid fa-link" />
+                  </div>
+
+                </a>
+
+                <div class="text-center">
+                  {{ item.title }}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -39,28 +59,33 @@ export default {
     RecipesCard,
   },
   props: {
-    popularRecipesData: Array,
+    popularRecipesData: Object,
+    foodieJournalData: Array,
   },
 
 };
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/config';
 
 .popular-recipes {
   padding-top: 3rem;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: $text_2;
 }
 
-p {
-  font-size: .8rem;
+.section-paragraph {
+  font-size: $text_1;
 }
 
 .section-paragraph {
   max-width: 600px;
   margin: auto;
+}
+.img-container {
+  position: relative;
 }
 </style>

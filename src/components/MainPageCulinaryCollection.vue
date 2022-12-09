@@ -1,6 +1,6 @@
 <template>
   <section class="culinary-collection">
-    <h2 class="text-center">
+    <h2 class="text-center fs-6">
       CULINARY COLLECTION
     </h2>
     <!-- eslint-disable-next-line -->
@@ -18,7 +18,7 @@
             :src="item.img"
             :alt="item.name"
           >
-          <div class="text-center">
+          <div class="text text-center p-2">
             {{ item.name }}
           </div>
         </div>
@@ -38,16 +38,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/config';
 .culinary-collection {
-  padding-top: 10rem;
+  padding-top: 7rem;
 }
 h2 {
-  font-size: 1.2rem;
+  font-size: $text_2;
 }
 p {
-  font-size: .8rem;
+  font-size: $text_1;
 }
 .section-paragraph {
+  font-size: $text_1;
   max-width: 500px;
   margin: auto;
 }
@@ -59,9 +61,13 @@ p {
     display: block;
     margin: auto;
   }
-  div {
+  .text {
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: $text_1;
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
   }
 }
 </style>

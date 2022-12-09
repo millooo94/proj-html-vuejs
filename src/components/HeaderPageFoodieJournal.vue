@@ -6,6 +6,7 @@
           <div class="icon d-flex flex-column justify-content-center mb-1">
             <font-awesome-icon
               icon="fa-brands fa-google-drive"
+              size="2x"
             />
             <div class="text text-center">
               Demos
@@ -31,17 +32,21 @@
         class="text-block d-flex flex-column
        justify-content-center align-items-center position-relative"
       >
-        <h1 class="text-center">
-          {{ foodieJournalData[0].title }}
-        </h1>
-        <span class="mt-2">{{ replaceDate() }}</span>
+        <div class="title-and-date">
+          <h1 class="section-title text-center">
+            {{ foodieJournalData[0].title }}
+          </h1>
+          <span
+            class="section-date d-flex justify-content-center align-items-center mt-2"
+          >{{ replaceDate() }}</span>
+        </div>
         <div class="tag">
           TODAY'S PICK
         </div>
       </div>
     </section>
     <section class="food-journal">
-      <h2 class="text-center mb-4">
+      <h2 class="text-center mb-4 fs-6">
         FOODIE JOURNAL
       </h2>
       <div class="row justify-content-between align-items-center">
@@ -81,9 +86,54 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/config';
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
 .foodie-journal {
-  background-color: #f6f7f1;
+  font-family: 'Cabin', sans-serif;
+  background-color: $secondary-color;
+}
+.section-title {
+  font-size: $text_4;
+}
+.section-date {
+  font-size: $text_2;
+  color: $gray;
+}
+.square-tag-block {
+  position: absolute;
+  z-index: 100;
+  right: .3rem;
+  transform: translateY(-75%);
+.price, .icon {
+  width: 55px;
+  height: 55px;
+  background-color: white;
+  color: #262628;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+  border-radius: 5px;
+  font-size: $text_1;
+  }
+  .icon {
+  gap: .2rem
+}
+.price {
+  font-family: 'Roboto', sans-serif;
+  .number {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: $green;
+
+  }
+  .dollar-symbol {
+    font-size: $text_1;
+    font-weight: 900;
+    position: relative;
+    bottom: 11px;
+    color: $green;
+  }
+}
 }
 .main-content {
   background-image: url('../../public/img/single-post-img3.jpg');
@@ -97,14 +147,18 @@ export default {
   padding: 2.5rem 1.5rem;
   border-radius: 5px;
   margin: 0 !important;
-  font-size: 1rem;
+  font-size: $text_2;
+  .title-and-date {
+    font-family: 'Vidaloka', serif;
+  }
   h1 {
-    font-size: 2.5rem !important;
+    font-size: $text_4 !important;
   }
   .tag {
     position: absolute;
-    background-color: #fc7525;
+    background-color: $primary-color;
     font-size: 1rem;
+    font-weight: 500;
     color: white;
     top: 0;
     transform: translateY(-50%);
@@ -112,48 +166,6 @@ export default {
     border-radius: 5px;
   }
 }
-.square-tag-block {
-  position: absolute;
-  z-index: 100;
-  right: .3rem;
-  transform: translateY(-75%);
-
-  a {
-    text-decoration: none;
-    font-size: .8rem;
-    color: black;
-    &:visited, &:hover, &:active {
-        color: inherit;
-      }
-  }
-}
-
-.icon {
-  gap: .2rem
-}
-.price {
-  .number {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #1ca142;
-  }
-  .dollar-symbol {
-    font-size: .8rem;
-    font-weight: bold;
-    position: relative;
-    bottom: 11px;
-    color: #1ca142;
-  }
-}
-.price, .icon {
-  width: 55px;
-  height: 55px;
-  background-color: white;
-  color: #262628;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
-  border-radius: 5px;
-  }
-
   .food-journal {
     margin: auto;
     transform: translateY(-15%);
@@ -161,8 +173,12 @@ export default {
     padding: 2rem;
     background-color: white;
     h2 {
-      font-size: 1.2rem;
+      font-size: $text_3;
     }
   }
+  .dotted-line {
+      width: 100px;
+      border: 1px dotted black;
+    }
 
 </style>
