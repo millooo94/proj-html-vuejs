@@ -2,7 +2,10 @@
   <section class="farm-to-table">
     <div class="row justify-content-between">
       <div class="text-block col-auto">
-        <h2 class="fs-6">
+        <h2
+          class="fs-6"
+          style="letter-spacing: .2rem;"
+        >
           FARM TO TABLE
         </h2>
         <p class="section-paragraph mt-4 mb-5">

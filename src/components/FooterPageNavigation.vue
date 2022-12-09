@@ -103,6 +103,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/config';
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 .logo-container {
   width: 60%;
   margin-bottom: 2rem;
@@ -118,13 +121,16 @@ export default {
   font-size: $text_2;
   font-weight: 600;
 }
-.contacts {
-  font-size: $text_1;
-  color: $gray;
-  h4 {
+h4 {
+    font-family: 'Cabin', sans-serif;
+    letter-spacing: .2rem;
     font-size: $text_3;
     color: $primary-color
   }
+
+.contacts {
+  font-size: $text_1;
+  color: $gray;
   .content > div {
     font-size: $text_1;
     gap: 1rem;
@@ -132,10 +138,7 @@ export default {
 }
 .download {
   padding-left: 2rem;
-  h4 {
-    font-size: $text_3;
-    color: $primary-color
-  }
+
   .img-container {
     width: 60%;
   }

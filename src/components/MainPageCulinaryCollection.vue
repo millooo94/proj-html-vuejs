@@ -1,6 +1,11 @@
 <template>
-  <section class="culinary-collection">
-    <h2 class="text-center fs-6">
+  <section
+    class="culinary-collection"
+  >
+    <h2
+      class="text-center fs-6"
+      style="letter-spacing: .2rem;"
+    >
       CULINARY COLLECTION
     </h2>
     <!-- eslint-disable-next-line -->
@@ -55,7 +60,7 @@ p {
 }
 .content {
   background-color: white;
-  padding: 1rem;
+  padding: .5rem;
   img {
     width: 50%;
     display: block;

@@ -1,6 +1,9 @@
 <template>
   <section class="popular-recipes fs-6">
-    <h2 class="text-center">
+    <h2
+      class="text-center"
+      style="letter-spacing: .2rem;"
+    >
       POPULAR RECIPES
     </h2>
     <!-- eslint-disable-next-line -->

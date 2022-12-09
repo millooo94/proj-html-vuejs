@@ -46,7 +46,10 @@
       </div>
     </section>
     <section class="food-journal">
-      <h2 class="text-center mb-4 fs-6">
+      <h2
+        class="text-center mb-4 fs-6"
+        style="letter-spacing: .2rem;"
+      >
         FOODIE JOURNAL
       </h2>
       <div class="row justify-content-between align-items-center">

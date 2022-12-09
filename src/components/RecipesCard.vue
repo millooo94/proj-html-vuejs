@@ -70,6 +70,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/config';
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 .card {
   border-radius: 2px !important;
   border: none !important;
@@ -78,6 +81,7 @@ export default {
   padding: 2rem;
 
   h3 {
+  font-family: "Vidaloka", serif;
   font-size: $text_2;
   margin: 0 !important;
 }
