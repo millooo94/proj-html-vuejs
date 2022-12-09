@@ -88,4 +88,24 @@ h2 {
 .img-container {
   position: relative;
 }
+.overlay {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(252, 117, 37, 0.5) 0%,rgba(252, 117, 37, 1) 100%);
+    color: white;
+    font-size: 1rem;
+    .icon {
+      clip-path: circle();
+      padding: .6em;
+      color: rgba(252, 117, 37, 0.5);
+      background-color: white;
+    }
+  }
+  .img-container:hover .overlay {
+    visibility: visible;
+  }
 </style>
