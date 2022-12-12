@@ -80,6 +80,7 @@ export default {
     background: linear-gradient(to bottom, rgba(252, 117, 37, 0.5) 0%,rgba(252, 117, 37, 1) 100%);
     color: white;
     font-size: 1rem;
+    padding: 2rem;
     .icon {
       clip-path: circle();
       padding: .6em;
