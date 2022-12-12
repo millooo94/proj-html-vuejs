@@ -23,10 +23,16 @@
     <div class="row main-content row-cols-2 g-5">
       <div class="col-8">
         <RecipesCard
-          :popular-recipes-data="popularRecipesData"
+          :img="popularRecipesData.recipeCard.img"
+          :title="popularRecipesData.recipeCard.title"
+          :tags="popularRecipesData.recipeCard.tags"
+          :date="foodieJournalData[0].date"
+          :paragraph="popularRecipesData.recipeCard.paragraph"
           :foodie-journal-data="foodieJournalData"
           if-not-button="true"
           if-not-read-more="false"
+          if-not-tags="true"
+          if-not-date="false"
         />
         <div class="foodie.journal-card-container row row-cols-2 g-4">
           <FoodieJournalCard

@@ -69,6 +69,7 @@ p {
   .text {
     text-transform: uppercase;
     font-size: $text_1;
+    font-weight: 500;
     &:hover {
       background-color: $primary-color;
       color: white;

@@ -5,9 +5,9 @@
   >
     <div class="img-container">
       <img
-        :src="popularRecipesData.recipeCard.img"
+        :src="img"
         class="card-img-top rounded-0"
-        :alt="popularRecipesData.recipeCard.title"
+        :alt="title"
       >
       <div class="overlay d-flex flex-column justify-content-center align-items-center">
         <a
@@ -20,18 +20,25 @@
           </div>
         </a>
         <div class="text-center">
-          {{ popularRecipesData.recipeCard.title }}
+          {{ title }}
         </div>
       </div>
     </div>
     <div class="card-body">
       <h3 class="card-title">
-        {{ popularRecipesData.recipeCard.title }}
+        {{ title }}
       </h3>
-      <span class="tags">{{ popularRecipesData.recipeCard.tags }}</span>
+      <span
+        v-if="ifNotTags == 'false'"
+        class="tags"
+      >{{ tags }}</span>
+      <span
+        v-if="ifNotDate == 'false'"
+        class="date"
+      >{{ date }}</span>
       <hr class="my-3">
       <p class="card-text">
-        {{ popularRecipesData.recipeCard.paragraph }}
+        {{ paragraph }}
       </p>
       <button
         v-if="(ifNotButton == 'false')"
@@ -44,8 +51,10 @@
         class="read-more d-flex justify-content-between align-items-center"
       >
         <div class="block-left d-flex align-items-center">
-          <span class="read-more-text">Read More</span>
-          <font-awesome-icon icon="fa-solid fa-chevron-right" />
+          <a href="#">
+            <span class="read-more-text">Read More</span>
+            <font-awesome-icon icon="fa-solid fa-chevron-right" />
+          </a>
         </div>
         <div class="block-right d-flex align-items-center">
           <font-awesome-icon icon="fa-regular fa-comments" />
@@ -60,9 +69,15 @@
 export default {
   name: 'RecipesCard',
   props: {
-    popularRecipesData: Object,
+    img: String,
+    title: String,
+    tags: String,
+    date: String,
+    paragraph: String,
     IfNotReadMore: String,
     ifNotButton: String,
+    ifNotTags: String,
+    ifNotDate: String,
   },
 
 };
@@ -85,7 +100,7 @@ export default {
   font-size: $text_2;
   margin: 0 !important;
 }
-.tags {
+.tags, .date {
   font-size: $text_1;
   color: $gray;
 }

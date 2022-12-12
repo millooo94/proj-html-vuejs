@@ -11,9 +11,14 @@
     <div class="row">
       <div class="col-6">
         <RecipesCard
-          :popular-recipes-data="popularRecipesData"
+          :img="popularRecipesData.recipeCard.img"
+          :title="popularRecipesData.recipeCard.title"
+          :tags="popularRecipesData.recipeCard.tags"
+          :paragraph="popularRecipesData.recipeCard.paragraph"
           if-not-button="false"
           if-not-read-more="true"
+          if-not-tags="false"
+          if-not-date="true"
         />
       </div>
       <div class="col-6">

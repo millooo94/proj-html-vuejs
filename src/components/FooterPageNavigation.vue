@@ -28,9 +28,12 @@
           <li
             v-for="item in navigationData.menu"
             :key="item"
-            class="mb-3"
+            class="h-100 pb-2 mb-3"
           >
-            <a href="#">{{ item }}</a>
+            <a
+              class="h-100"
+              href="#"
+            >{{ item }}</a>
           </li>
         </ul>
       </div>
@@ -84,7 +87,19 @@
         </div>
       </div>
     </div>
-    <section class="sub-footer d-flex justify-content-center align-items-center">
+    <section class="sub-footer position-relative d-flex justify-content-center align-items-center">
+      <div class="chevron-circle">
+        <a
+          title="chevron-up"
+          aria-label="chevron-up"
+          class="w-100 h-100 d-flex justify-content-center alig-items-center"
+          href="#"
+        >
+          <font-awesome-icon
+            icon="fa-solid fa-chevron-up"
+          />
+        </a>
+      </div>
       <!-- eslint-disable-next-line  -->
       &copy; Copyright 2012-2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by Wordpress
     </section>
@@ -148,6 +163,33 @@ h4 {
   background-color: $secondary-color;
   padding: 2.5rem;
   font-size:  $text_0;
+}
+li {
+  width: fit-content;
+  position: relative;
+    &:hover {
+      color: $primary-color
+    }
+    &:hover::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: $primary-color;
+      }
+}
+.chevron-circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #39403e;
+  color: white;
+  top: 10%;
+  left: 4%;
+  padding: .9em;
 }
 
 </style>

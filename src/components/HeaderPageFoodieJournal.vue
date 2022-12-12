@@ -101,7 +101,7 @@ export default {
   font-size: $text_4;
 }
 .section-date {
-  font-size: $text_2;
+  font-size: 1rem;
   color: $gray;
 }
 .square-tag-block {

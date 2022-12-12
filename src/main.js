@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faMagnifyingGlass, faBookOpenReader, faEarthAmericas, faArrowRightFromBracket,
-  faLocationDot, faPhoneFlip, faEnvelope, faLink, faChevronRight,
+  faLocationDot, faPhoneFlip, faEnvelope, faLink, faChevronRight, faChevronUp,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -33,6 +33,7 @@ library.add(
   faLink,
   faChevronRight,
   faComments,
+  faChevronUp,
 );
 Vue.component('FontAwesomeIcon', FontAwesomeIcon);
 

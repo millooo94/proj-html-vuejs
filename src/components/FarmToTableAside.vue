@@ -61,13 +61,23 @@
         </a>
       </div>
     </div>
-    <div class="buttons-block my-5">
-      <button class="popular">
-        Popular
-      </button>
-      <button class="recent">
-        Recent
-      </button>
+    <div class="buttons-block d-flex justify-content-center align-items-center my-5">
+      <div class="popular text-center h-100">
+        <a
+          href="#"
+          class="w-100 h-100"
+        >
+          Popular
+        </a>
+      </div>
+      <div class="recent text-center h-100">
+        <a
+          href="#"
+          class="h-100"
+        >
+          Recent
+        </a>
+      </div>
     </div>
     <div class="popular-articles">
       <div class="article d-flex align-items-center">
@@ -153,7 +163,7 @@
             <!-- eslint-disable-next-line -->
               <p class="tweet-paragraph">{{ farmToTableData[3].tweetFirstPart }} <a style="color: #0000EE;" href="#">#avada</a> {{ farmToTableData[3].tweetSecondPart }} <br> <a style="color: #0000EE;" href="#">{{farmToTableData[3].link}}</a></p>
             <img
-              class="w-100 mb-2"
+              class="w-100 mb-2 rounded"
               src="img/En2TRxLW4AEiWUN.jpeg"
               alt="sales image"
             >
@@ -196,6 +206,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/config';
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 .latest-recipes-title {
   max-width: 100px;
   position: absolute;
@@ -265,18 +278,22 @@ input {
   }
   }
 .buttons-block {
+  font-family: "Vidaloka", serif;
+  color: $black;
+  border: 1px solid rgb(214, 213, 213);
 
   .popular {
     width: 50%;
     border-right: 1px solid transparent;
     background-color: white;
-    border-color: $light-gray;
+    border-right: 1px solid rgb(214, 213, 213);
     padding: .5rem;
+    font-weight: 500;
   }
   .recent {
     width: 50%;
-    border-color: $light-gray;
     padding: .5rem;
+    font-weight: 500;
   }
 }
 .article {
