@@ -50,13 +50,16 @@
         v-if="(IfNotReadMore == 'false')"
         class="read-more d-flex justify-content-between align-items-center"
       >
-        <div class="block-left d-flex align-items-center">
-          <a href="#">
-            <span class="read-more-text">Read More</span>
-            <font-awesome-icon icon="fa-solid fa-chevron-right" />
+        <div class="block-left">
+          <a
+            class="d-flex justify-content-center align-items-center"
+            href="#"
+          >
+            <span class="read-more-text me-1">Read More</span>
+            <div class="chevron-right"><font-awesome-icon icon="fa-solid fa-chevron-right" /></div>
           </a>
         </div>
-        <div class="block-right d-flex align-items-center">
+        <div class="block-right d-flex justify-content-center align-items-center">
           <font-awesome-icon icon="fa-regular fa-comments" />
           <span>0</span>
         </div>
@@ -85,9 +88,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/config';
-@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 .card {
   border-radius: 2px !important;
   border: none !important;
@@ -130,6 +130,10 @@ button {
 }
 .read-more-text {
   font-size: $text_0;
+}
+.chevron-right {
+  transform: translateY(13%);
+  font-size: .5rem;
 }
 .overlay {
     visibility: hidden;

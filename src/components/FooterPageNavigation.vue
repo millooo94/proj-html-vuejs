@@ -118,9 +118,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/config';
-@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 .logo-container {
   width: 60%;
   margin-bottom: 2rem;
@@ -159,7 +156,7 @@ h4 {
   }
 }
 .sub-footer {
-  height: 3rem;
+  height: 1rem;
   background-color: $secondary-color;
   padding: 2.5rem;
   font-size:  $text_0;
